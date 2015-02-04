@@ -5,7 +5,12 @@ function onBodyLoad() {
 }
 
 function onDeviceReady(){
-    navigator.notification.alert("VIVIMo 1.0");
+    navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
 		
 	}
 	

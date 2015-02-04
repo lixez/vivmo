@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "com.ar.interatech.phonegaptest"
+		id        = "com.ar.interatech.vivmo"
 		versionCode="1.0.0"
 		version   = "1.0.0">
-		<name>phonegaptest1.4.5</name>
+		<name>VIVMo 1.0</name>
 		<description>
 		</description>
 		<author href="www.interatech.com.ar" email="gabriel@interatech.com.ar">

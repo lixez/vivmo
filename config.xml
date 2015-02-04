@@ -44,6 +44,7 @@ Gabriel Suarez
 		<gap:platform name="winphone" />
 		<gap:plugin name="org.apache.cordova.dialogs"  />
 		<gap:plugin name="org.apache.cordova.file-transfer"  />
+<param name="android-package" value="org.apache.cordova.dialogs.Notification" />
 		<icon src="img/icon36.png" gap:platform="android" gap:density="ldpi" />
 		<icon src="img/icon48.png" gap:platform="android" gap:density="mdpi" />
 		<icon src="img/icon72.png" gap:platform="android" gap:density="hdpi" />

@@ -1,6 +1,6 @@
 // JavaScript Document
 
-var existe_naves
+var existe_db
 var db
 
 
@@ -19,17 +19,12 @@ function onDeviceReady() {
 	
 	db = window.openDatabase("vivmoDB", "1.0", "DB de VIVMo", 200000);
 	
-	if(existe_naves == null){
+	if(existe_db == null){
 		creaNaves();
-		}
-	
-	if(existe_instalaciones == null){
 		creaInstalaciones();
-		}
-		
-	if(existe_mediciones == null){
 		creaMediciones();
 		}
+	
 
 
 };

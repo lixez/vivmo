@@ -65,9 +65,9 @@ function creaInstalaciones(){
 	db.transaction(creaNuevaInstalaciones, errorDB, creaInstalacionesSuccess);
 };
 
-function creaNuevaInstalaciones(tx){
+function creaNuevaInstalaciones(tx2){
 		
-	tx.executeSql('DROP TABLE IF EXISTS instalaciones');
+	tx2.executeSql('DROP TABLE IF EXISTS instalaciones');
 	
 	var sql = "CREATE TABLE IF NOT EXISTS instalaciones ( "+
 		"id INTEGER, " +
@@ -82,7 +82,7 @@ function creaNuevaInstalaciones(tx){
 		"especies VARCHAR(50), " +
 		"unique (_id, Instalacion), ";
 		
-	tx.executeSql(sql);
+	tx2.executeSql(sql);
 	
 	
 };
@@ -98,9 +98,9 @@ function creaMediciones(){
 	db.transaction(creaNuevaMediciones, errorDB, creaMedicionesSuccess);
 };
 
-function creaNuevaMediciones(tx){
+function creaNuevaMediciones(tx3){
 		
-	tx.executeSql('DROP TABLE IF EXISTS mediciones');
+	tx3.executeSql('DROP TABLE IF EXISTS mediciones');
 	
 	var sql = "CREATE TABLE IF NOT EXISTS mediciones ( "+
 	"_id INTEGER PRIMARY KEY AUTOINCREMENT,"+
@@ -121,7 +121,7 @@ function creaNuevaMediciones(tx){
 "Altura FLOAT,"+
 "Diametro FLOAT,";
 		
-	tx.executeSql(sql);
+	tx3.executeSql(sql);
 	
 	
 };

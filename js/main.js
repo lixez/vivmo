@@ -30,6 +30,7 @@ function onDeviceReady() {
 	
 function creaBase(){
 	db.transaction(creaNuevaBase, errorDB, creaBaseSuccess);
+	navigator.notification.alert("CREANDO BASE","accion", "MENSAJE DE SISTEMA", "Continuar");
 };
 
 function creaNuevaBase(tx){

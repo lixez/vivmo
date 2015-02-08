@@ -1,359 +1,312 @@
 <!DOCTYPE html> 
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>VIVMo 1.0</title>
+    <meta charset="utf-8">
+    <title>VIVMo 1.0</title>
+    
+    <link rel="stylesheet" href="themes/VIVMo.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery.mobile.structure-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css">
 
-<link rel="stylesheet" href="themes/VIVMo.min.css" />
-<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-<script src="js/main.js"></script>
-
+    
+	<script src="js/jquery.min.js"></script>
+    
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	
+	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script src="js/main.js"></script>
 
 </head> 
 
 <body onLoad="onLoad()"> 
+
+
+<!--------------------------------------------------------->
+<!--PAGINA PRINCIPAL--------------------------------------->
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
 <div data-role="page" id="home">
-      <div data-role="header">
-        <h1>VIVMO - App</h1>
+
+	<div data-role="header">
+        <h1>MENU</h1>
+ 	</div>
+
+	<div data-role="content" style="text-align:center">
+	  
+      <div class="ui-grid-a">
+	    
+        <div class="ui-block-a"><a href="#naves">NAVES</a></div>
+	    <div class="ui-block-a"><a href="#instalaciones">INSTALACIONES</a></div>
+	    <div class="ui-block-a"><a href="#medir">MEDIR</a></div>
+	    
       </div>
-      <div data-role="content" style="text-align:center">
-        <div class="ui-grid-a">
-          <div class="ui-block-a">
-           <a href="#medir"><img src="img/home1.png" width="192" height="192"></a>
-          <a href="#medir" data-role="button" data-icon="plus">NUEVA MEDICIÓN</a>
-          
-          </div>
-          <div class="ui-block-b">
-          
-          <a href="#listar"><img src="img/home2.png" width="192" height="192"></a>
-          <a href="#listar" data-role="button" data-icon="plus">VER MEDICIONES</a>
-          
-          </div>
-        </div>
-        
         
       
-      
-      
-  </div>
-  <div data-role="footer">
+
+	</div>
+
+
+    <div data-role="footer">
         <h4>Moebius-IT @ 2015</h4>
-      </div>
     </div>
 
+</div>
 
+<!--------------------------------------------------------->
+<!--NAVES------------------------------------------>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
 
-    <div data-role="page" data-theme="a" id="medir">
-        <div data-role="header">
-            <h1>VIVMO - App</h1>
-        </div>
+<div data-role="page" data-theme="a" id="naves">
 
-        <div data-role="content">
-            <div class="ui-body ui-body-a ui-corner-all">
-                <table border="0" cellpadding="0" width="100%">
-                    <tr>
-                        <td>
-                            Nave
+    <div data-role="header">
+    	<h1>NAVES</h1>
+    </div>
 
-                            <div data-role="fieldcontain">
-                                <select data-native-menu="false" id=
-                                "selectmenu" name="selectmenu">
-                                    <option value="option1">
-                                        1
-                                    </option>
-
-                                    <option value="option2">
-                                        2
-                                    </option>
-
-                                    <option value="option3">
-                                        3
-                                    </option>
-
-                                    <option value="option1">
-                                        1
-                                    </option>
-
-                                    <option value="option2">
-                                        2
-                                    </option>
-
-                                    <option value="option3">
-                                        3
-                                    </option>
-
-                                    <option value="option1">
-                                        1
-                                    </option>
-
-                                    <option value="option2">
-                                        2
-                                    </option>
-
-                                    <option value="option3">
-                                        3
-                                    </option>
-
-                                    <option value="option1">
-                                        1
-                                    </option>
-
-                                    <option value="option2">
-                                        2
-                                    </option>
-
-                                    <option value="option3">
-                                        3
-                                    </option>
-
-                                    <option value="option1">
-                                        1
-                                    </option>
-
-                                    <option value="option2">
-                                        2
-                                    </option>
-
-                                    <option value="option3">
-                                        3
-                                    </option>
-                                </select>
-                            </div>
-                        </td>
-
-                        <td>
-                            Instalaci&#243;n
-
-                            <div data-role="fieldcontain">
-                                <select id="selectmenu" name="selectmenu">
-                                    <option value="option1">
-                                        134,2014-08-26,2015,80,7-A,70
-                                    </option>
-
-                                    <option value="option2">
-                                        134,2014-08-26,2015,80,7-A,70
-                                    </option>
-
-                                    <option value="option3">
-                                        134,2014-08-26,2015,80,7-A,70
-                                    </option>
-                                </select>
-                            </div>
-                        </td>
-
-                        <td>
-                            Muestras
-
-                            <div data-role="fieldcontain">
-                                <input id="textinput" name="textinput" size="5"
-                                type="text" value="">
-                            </div>
-                        </td>
-
-                        <td>
-                            Parcelas
-
-                            <div data-role="fieldcontain">
-                                <input id="textinput" name="textinput" size="5"
-                                type="text" value="">
-                            </div>
-                        </td>
-
-                        <td>
-                            Muertas
-
-                            <div data-role="fieldcontain">
-                                <input id="textinput" name="textinput" size="5"
-                                type="text" value="">
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-
-                <div class="ui-grid-c">
-                    <div class="ui-block-a">
-                        Planta
-
-                        <div data-role="fieldcontain">
-                            <input id="textinput" name="textinput" size="5"
-                            type="text" value="">
-                        </div>
-                    </div>
-
-                    <div class="ui-block-b">
-                        Plantas
-
-                        <div data-role="fieldcontain">
-                            <input id="textinput" name="textinput" size="5"
-                            type="text" value="">
-                        </div>
-                    </div>
-
-                    <div class="ui-block-c">
-                        Diametro
-
-                        <div data-role="fieldcontain">
-                            <input id="textinput" name="textinput" size="5"
-                            type="text" value="">
-                        </div>
-                    </div>
-
-                    <div class="ui-block-d">
-                        Altura
-
-                        <div data-role="fieldcontain">
-                            <input id="textinput" name="textinput" size="5"
-                            type="text" value="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ui-grid-c">
-                    <div class="ui-block-a">
-                        <button data-icon="plus" >Agregar</button>
-                    </div>
-
-                    <div class="ui-block-b">
-                        <button data-icon="check" data-theme=
-                        "c">Guardar</button>
-                    </div>
-
-                    <div class="ui-block-c">
-                        <button data-icon="delete" data-theme=
-                        "b">Eliminar</button>
-                    </div>
-
-                    <div class="ui-block-d">
-                        <button data-icon="search">Buscar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div data-role="content">
+      <ul data-role="listview">
+        <li id="nombreNave"><a href="#detalleNaves">A-10</a></li>
+      </ul>
+                    
+    </div>
         
   
 
-        <div data-role="footer">
-            <h4>Moebius-IT @ 2015</h4>
-        </div>
-    </div>
-    <div data-role="page" id="listar">
-      <div data-role="header">
-       <h1>VIVMO - App</h1>
-      </div>
-      <div data-role="content">
-            <div class="ui-body ui-body-a ui-corner-all">
-<table width="100%" border="0" cellpadding="0">
-  <tr>
-    <td>ID</td>
-    <td>NAVE</td>
-    <td>MUESTRA</td>
-    <td>PARC.</td>
-    <td>PLANT.</td>
-    <td>PLANTS.</td>
-    <td>MUERT.</td>
-    <td>ALT.</td>
-    <td>DIAMETR.</td>
-    <td>SELECC.</td>
-  </tr>
-  
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>2,66,2015,4-A,27 T,T,88,0,25696,TC</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td><button data-icon="arrow-l" data-iconpos="notext"></button></td>
-  </tr>
-  
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>2,66,2015,4-A,27 T,T,88,0,25696,TC</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-        <td><button data-icon="arrow-l" data-iconpos="notext"></button></td>
-
-  </tr>
-  
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>2,66,2015,4-A,27 T,T,88,0,25696,TC</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-        <td><button data-icon="arrow-l" data-iconpos="notext"></button></td>
-
-  </tr>
-  
-  
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>2,66,2015,4-A,27 T,T,88,0,25696,TC</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-        <td><button data-icon="arrow-l" data-iconpos="notext"></button></td>
-
-  </tr>
-  
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>2,66,2015,4-A,27 T,T,88,0,25696,TC</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-        <td><button data-icon="arrow-l" data-iconpos="notext"></button></td>
-
-  </tr>
-  
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>2,66,2015,4-A,27 T,T,88,0,25696,TC</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-    <td>30</td>
-        <td><button data-icon="arrow-l" data-iconpos="notext"></button></td>
-
-  </tr>
-</table>
-
-</div>
-</div>
-      <div data-role="footer">
-         <h4>Moebius-IT @ 2015</h4>
-      </div>
+     <div data-role="footer">
+     	<h4>Moebius-IT @ 2015</h4>
     </div>
     
+</div>
+
+
+
+<!--------------------------------------------------------->
+<!--DETALLE NAVES------------------------------------------>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
+<div data-role="page" data-theme="a" id="detalleNaves">
+
+    <div data-role="header">
+    	<h1>DETALLE NAVES</h1>
+    </div>
+
+    <div data-role="content">
+		
+       <div data-role="fieldcontain">
+            <label for="instalacionSelect" class="select">Instalación:</label>
+            <select name="instalacionSelect" id="instalacion">
+              <option value="option1">134 NC:56 P:2345</option>
+            </select>
+        </div>
+        
+        <div id="muestras">
+          <div data-role="fieldcontain">
+            <label for="muestras">Muestras:</label>
+            <input type="text" name="muestras" id="muestras" value=""  />
+          </div>
+        </div>
+
+        <div id="parcela">
+          <div data-role="fieldcontain">
+            <label for="parcela">Parcela:</label>
+            <input type="text" name="parcela" id="parcela" value=""  />
+          </div>
+        </div>
+
+        <div id="muertas">
+          <div data-role="fieldcontain">
+            <label for="muertas">Muertas:</label>
+            <input type="text" name="muertas" id="muertas" value=""  />
+          </div>
+        </div>
+        
+        <div id="plantas">
+          <div data-role="fieldcontain">
+            <label for="plantas">Plantas:</label>
+            <input type="text" name="plantas" id="plantas" value=""  />
+          </div>
+        </div>
+
+        <div id="planta">
+          <div data-role="fieldcontain">
+            <label for="planta">Planta:</label>
+            <input type="text" name="planta" id="planta" value=""  />
+          </div>
+        </div>
+
+        <div id="altura">
+          <div data-role="fieldcontain">
+            <label for="altura">Altura:</label>
+            <input type="text" name="altura" id="altura" value=""  />
+          </div>
+        </div>
+
+
+        <div id="diametro">
+          <div data-role="fieldcontain">
+            <label for="diametro">Diametro:</label>
+            <input type="text" name="diametro" id="diametro" value=""  />
+          </div>
+        </div>
+        <a href="#formEdit" data-role="button">EDITAR</a>
+
+
+
+
+    </div>
+        
+  
+
+     <div data-role="footer">
+     	<h4>Moebius-IT @ 2015</h4>
+    </div>
+    
+</div>
+
+
+<!--------------------------------------------------------->
+<!--INSTALACIONES------------------------------------------>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
+<div data-role="page" data-theme="a" id="instalaciones">
+
+    <div data-role="header">
+    	<h1>INSTALACIONES</h1>
+    </div>
+
+    <div data-role="content">
+                
+    </div>
+        
+  
+
+     <div data-role="footer">
+     	<h4>Moebius-IT @ 2015</h4>
+    </div>
+    
+</div>
+
+
+
+<!--------------------------------------------------------->
+<!--DETALLE INSTALACIONES------------------------------------------>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
+<div data-role="page" data-theme="a" id="detalleInstalaciones">
+
+    <div data-role="header">
+    	<h1>DETALLE INSTALACIONES</h1>
+    </div>
+
+    <div data-role="content">
+                
+    </div>
+        
+  
+
+     <div data-role="footer">
+     	<h4>Moebius-IT @ 2015</h4>
+    </div>
+    
+</div>
+
+
+<!--------------------------------------------------------->
+<!--MEDIR------------------------------------------>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
+<div data-role="page" data-theme="a" id="medir">
+
+    <div data-role="header">
+    	<h1>MEDIR</h1>
+    </div>
+
+<div data-role="content">
+
+      <div data-role="fieldcontain">
+            <label for="naveSelect" class="select">Nave:</label>
+            <select name="naveSelect" id="nave">
+              <option value="option1">A-10</option>
+            </select>
+        </div>
+		
+        <div data-role="fieldcontain">
+            <label for="instalacionSelect" class="select">Instalación:</label>
+            <select name="instalacionSelect" id="instalacion">
+              <option value="option1">134 NC:56 P:2345</option>
+            </select>
+        </div>
+		  
+        
+        <div id="muestras">
+          <div data-role="fieldcontain">
+            <label for="muestras">Muestras:</label>
+            <input type="text" name="muestras" id="muestras" value=""  />
+          </div>
+        </div>
+
+        <div id="parcela">
+          <div data-role="fieldcontain">
+            <label for="parcela">Parcela:</label>
+            <input type="text" name="parcela" id="parcela" value=""  />
+          </div>
+        </div>
+
+        <div id="muertas">
+          <div data-role="fieldcontain">
+            <label for="muertas">Muertas:</label>
+            <input type="text" name="muertas" id="muertas" value=""  />
+          </div>
+        </div>
+        
+        <div id="plantas">
+          <div data-role="fieldcontain">
+            <label for="plantas">Plantas:</label>
+            <input type="text" name="plantas" id="plantas" value=""  />
+          </div>
+        </div>
+
+        <div id="planta">
+          <div data-role="fieldcontain">
+            <label for="planta">Planta:</label>
+            <input type="text" name="planta" id="planta" value=""  />
+          </div>
+        </div>
+
+        <div id="altura">
+          <div data-role="fieldcontain">
+            <label for="altura">Altura:</label>
+            <input type="text" name="altura" id="altura" value=""  />
+          </div>
+        </div>
+
+
+        <div id="diametro">
+          <div data-role="fieldcontain">
+            <label for="diametro">Diametro:</label>
+            <input type="text" name="diametro" id="diametro" value=""  />
+          </div>
+        </div>
+        <a href="#formNew" data-role="button">GUARDAR</a>
+
+
+
+
+    </div>
+        
+  
+
+     <div data-role="footer">
+     	<h4>Moebius-IT @ 2015</h4>
+    </div>
+    
+</div>
     
     
     

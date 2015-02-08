@@ -1,314 +1,373 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
+
     <title>VIVMo 1.0</title>
-    
-    <link rel="stylesheet" href="themes/VIVMo.min.css" />
-    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" type="text/css" href="js/jquery.mobile.structure-1.4.5.min.css">
-<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css">
-
-    
-	<script src="js/jquery.min.js"></script>
-    
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-	
-	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <link href="themes/VIVMo.min.css" rel="stylesheet">
+    <link href="themes/jquery.mobile.icons.min.css" rel="stylesheet">
+    <link href="js/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet"
+    type="text/css">
+    <link href="js/jquery.mobile-1.4.5.min.css" rel="stylesheet" type=
+    "text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script charset="utf-8" src="phonegap.js" type="text/javascript"></script>
     <script src="js/main.js"></script>
+</head>
 
-</head> 
+<body onload="onLoad()">
 
-<body onLoad="onLoad()"> 
+    <!--=====================================================-->
+    <!--PAGINA PRINCIPAL=====================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
 
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>MENU</h1>
+        </div>
 
-<!--------------------------------------------------------->
-<!--PAGINA PRINCIPAL--------------------------------------->
-<!--------------------------------------------------------->
-<!--------------------------------------------------------->
-<div data-role="page" id="home">
+        <div data-role="content" style="text-align:center">
+            <table border="0" cellpadding="0" width="100%">
+                <tr>
+                    <td align="center" valign="middle">
+                        <a href="#naves"><img height="90%" src=
+                        "themes/images/icons-png/icons-home-naves.png"></a>
 
-	<div data-role="header">
-        <h1>MENU</h1>
- 	</div>
+                        <p>NAVES</p>
+                    </td>
 
-	<div data-role="content" style="text-align:center">
-	  
-      <div class="ui-grid-a">
-	    
-        <div class="ui-block-a"><a href="#naves">NAVES</a></div>
-	    <div class="ui-block-a"><a href="#instalaciones">INSTALACIONES</a></div>
-	    <div class="ui-block-a"><a href="#medir">MEDIR</a></div>
-	    
-      </div>
-        
-      
+                    <td align="center" valign="middle">
+                        <a href="#instalaciones"><img height="90%" src=
+                        "themes/images/icons-png/icons-home-instalaciones.png"></a>
 
-	</div>
+                        <p>INSTALACIONES</p>
+                    </td>
+                </tr>
 
+                <tr>
+                    <td align="center" valign="middle">
+                        <a href="#medir"><img height="90%" src=
+                        "themes/images/icons-png/icons-home-medir.png"></a>
 
-    <div data-role="footer">
-        <h4>Moebius-IT @ 2015</h4>
-    </div>
+                        <p>MEDIR</p>
+                    </td>
 
-</div>
+                    <td align="center" valign="middle">
+                        <a href="#buscar"><img height="90%" src=
+                        "themes/images/icons-png/icons-home-buscar.png"></a>
 
-<!--------------------------------------------------------->
-<!--NAVES------------------------------------------>
-<!--------------------------------------------------------->
-<!--------------------------------------------------------->
+                        <p>BUSCAR</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-<div data-role="page" data-theme="a" id="naves">
-
-    <div data-role="header">
-    	<h1>NAVES</h1>
-    </div>
-
-    <div data-role="content">
-      <ul data-role="listview">
-        <li id="nombreNave"><a href="#detalleNaves">A-10</a></li>
-      </ul>
-                    
-    </div>
-        
-  
-
-     <div data-role="footer">
-     	<h4>Moebius-IT @ 2015</h4>
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
     </div>
     
-</div>
+    <!--=====================================================-->
+    <!--NAVES========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
 
-
-
-<!--------------------------------------------------------->
-<!--DETALLE NAVES------------------------------------------>
-<!--------------------------------------------------------->
-<!--------------------------------------------------------->
-
-<div data-role="page" data-theme="a" id="detalleNaves">
-
-    <div data-role="header">
-    	<h1>DETALLE NAVES</h1>
-    </div>
-
-    <div data-role="content">
-		
-       <div data-role="fieldcontain">
-            <label for="instalacionSelect" class="select">Instalación:</label>
-            <select name="instalacionSelect" id="instalacion">
-              <option value="option1">134 NC:56 P:2345</option>
-            </select>
-        </div>
-        
-        <div id="muestras">
-          <div data-role="fieldcontain">
-            <label for="muestras">Muestras:</label>
-            <input type="text" name="muestras" id="muestras" value=""  />
-          </div>
+    <div data-role="page" data-theme="a" id="naves">
+        <div data-role="header">
+            <h1>NAVES</h1>
         </div>
 
-        <div id="parcela">
-          <div data-role="fieldcontain">
-            <label for="parcela">Parcela:</label>
-            <input type="text" name="parcela" id="parcela" value=""  />
-          </div>
-        </div>
-
-        <div id="muertas">
-          <div data-role="fieldcontain">
-            <label for="muertas">Muertas:</label>
-            <input type="text" name="muertas" id="muertas" value=""  />
-          </div>
-        </div>
-        
-        <div id="plantas">
-          <div data-role="fieldcontain">
-            <label for="plantas">Plantas:</label>
-            <input type="text" name="plantas" id="plantas" value=""  />
-          </div>
-        </div>
-
-        <div id="planta">
-          <div data-role="fieldcontain">
-            <label for="planta">Planta:</label>
-            <input type="text" name="planta" id="planta" value=""  />
-          </div>
-        </div>
-
-        <div id="altura">
-          <div data-role="fieldcontain">
-            <label for="altura">Altura:</label>
-            <input type="text" name="altura" id="altura" value=""  />
-          </div>
-        </div>
-
-
-        <div id="diametro">
-          <div data-role="fieldcontain">
-            <label for="diametro">Diametro:</label>
-            <input type="text" name="diametro" id="diametro" value=""  />
-          </div>
-        </div>
-        <a href="#formEdit" data-role="button">EDITAR</a>
-
-
-
-
-    </div>
-        
-  
-
-     <div data-role="footer">
-     	<h4>Moebius-IT @ 2015</h4>
-    </div>
-    
-</div>
-
-
-<!--------------------------------------------------------->
-<!--INSTALACIONES------------------------------------------>
-<!--------------------------------------------------------->
-<!--------------------------------------------------------->
-
-<div data-role="page" data-theme="a" id="instalaciones">
-
-    <div data-role="header">
-    	<h1>INSTALACIONES</h1>
-    </div>
-
-    <div data-role="content">
+        <div data-role="content">
+            <ul data-role="listview" id="listadoNaves">
                 
-    </div>
-        
-  
+            </ul>
+        </div>
 
-     <div data-role="footer">
-     	<h4>Moebius-IT @ 2015</h4>
-    </div>
-    
-</div>
-
-
-
-<!--------------------------------------------------------->
-<!--DETALLE INSTALACIONES------------------------------------------>
-<!--------------------------------------------------------->
-<!--------------------------------------------------------->
-
-<div data-role="page" data-theme="a" id="detalleInstalaciones">
-
-    <div data-role="header">
-    	<h1>DETALLE INSTALACIONES</h1>
-    </div>
-
-    <div data-role="content">
-                
-    </div>
-        
-  
-
-     <div data-role="footer">
-     	<h4>Moebius-IT @ 2015</h4>
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
     </div>
     
-</div>
+    <!--=====================================================-->
+    <!--DETALLE NAVES========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
 
-
-<!--------------------------------------------------------->
-<!--MEDIR------------------------------------------>
-<!--------------------------------------------------------->
-<!--------------------------------------------------------->
-
-<div data-role="page" data-theme="a" id="medir">
-
-    <div data-role="header">
-    	<h1>MEDIR</h1>
-    </div>
-
-<div data-role="content">
-
-      <div data-role="fieldcontain">
-            <label for="naveSelect" class="select">Nave:</label>
-            <select name="naveSelect" id="nave">
-              <option value="option1">A-10</option>
-            </select>
-        </div>
-		
-        <div data-role="fieldcontain">
-            <label for="instalacionSelect" class="select">Instalación:</label>
-            <select name="instalacionSelect" id="instalacion">
-              <option value="option1">134 NC:56 P:2345</option>
-            </select>
-        </div>
-		  
-        
-        <div id="muestras">
-          <div data-role="fieldcontain">
-            <label for="muestras">Muestras:</label>
-            <input type="text" name="muestras" id="muestras" value=""  />
-          </div>
+    <div data-role="page" data-theme="a" id="detalleNaves">
+        <div data-role="header">
+            <h1>DETALLE NAVES</h1>
         </div>
 
-        <div id="parcela">
-          <div data-role="fieldcontain">
-            <label for="parcela">Parcela:</label>
-            <input type="text" name="parcela" id="parcela" value=""  />
-          </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect">
+                    <option value="option1">
+                        134 NC:56 P:2345
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" type="text" value="">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" value="">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" value="">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#formEdit">EDITAR</a>
         </div>
 
-        <div id="muertas">
-          <div data-role="fieldcontain">
-            <label for="muertas">Muertas:</label>
-            <input type="text" name="muertas" id="muertas" value=""  />
-          </div>
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
         </div>
-        
-        <div id="plantas">
-          <div data-role="fieldcontain">
-            <label for="plantas">Plantas:</label>
-            <input type="text" name="plantas" id="plantas" value=""  />
-          </div>
-        </div>
-
-        <div id="planta">
-          <div data-role="fieldcontain">
-            <label for="planta">Planta:</label>
-            <input type="text" name="planta" id="planta" value=""  />
-          </div>
-        </div>
-
-        <div id="altura">
-          <div data-role="fieldcontain">
-            <label for="altura">Altura:</label>
-            <input type="text" name="altura" id="altura" value=""  />
-          </div>
-        </div>
-
-
-        <div id="diametro">
-          <div data-role="fieldcontain">
-            <label for="diametro">Diametro:</label>
-            <input type="text" name="diametro" id="diametro" value=""  />
-          </div>
-        </div>
-        <a href="#formNew" data-role="button">GUARDAR</a>
-
-
-
-
-    </div>
-        
-  
-
-     <div data-role="footer">
-     	<h4>Moebius-IT @ 2015</h4>
     </div>
     
-</div>
+    <!--=====================================================-->
+    <!--INSTALACIONES========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="instalaciones">
+        <div data-role="header">
+            <h1>INSTALACIONES</h1>
+        </div>
+
+        <div data-role="content">
+            <ul data-role="listview">
+                <li id="descripcionInstalacion">
+                    <a href="#detalleInstalaciones">333 bc : 43434 : 55554</a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
     
+    <!--=====================================================-->
+    <!--DETALLE INSTALACIONES========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="detalleInstalaciones">
+        <div data-role="header">
+            <h1>DETALLE INSTALACIONES</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="temporada">Temporada:</label> <input id="temporada"
+                name="temporada" type="text" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="nave">Nave:</label> <input id="nave" name="nave"
+                type="text" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="codigo">Codigo:</label> <input id="codigo" name=
+                "codigo" type="text" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="fuente">Fuente:</label> <input id="fuente" name=
+                "fuente" type="text" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="contenedor">Contenedor:</label> <input id=
+                "contenedor" name="contenedor" type="text" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="parcelas">Parcelas:</label> <input id="parcelas"
+                name="parcelas" type="text" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="estratos">Estratos:</label> <input id="estratos"
+                name="estratos" type="text" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="especies">Especies:</label> <input id="especies"
+                name="especies" type="text" value="">
+            </div>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
     
+    <!--=====================================================-->
+    <!--MEDIR========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect">
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect">
+                    <option value="option1">
+                        134 NC:56 P:2345
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" type="text" value="">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" value="">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" value="">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#formNew">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
     
+    <!--=====================================================-->
+    <!--BUSCAR / LISTAR========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="naves">
+        <div data-role="header">
+            <h1>MEDICIONES</h1>
+        </div>
+
+        <div data-role="content">
+            <table border="0" cellpadding="0" width="100%">
+                <tr>
+                    <td>ID</td>
+
+                    <td>NAVE</td>
+
+                    <td>INSTALACION</td>
+
+                    <td>PARCELA</td>
+
+                    <td>MUERTAS</td>
+
+                    <td>PLANTAS</td>
+
+                    <td>PLANTA</td>
+
+                    <td>ALTURA</td>
+
+                    <td>DIAMETRO</td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
 </body>
 </html>

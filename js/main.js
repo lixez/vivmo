@@ -21,8 +21,7 @@ function onDeviceReady() {
 	
 	if(existe_db == null){
 		creaNaves();
-		creaInstalaciones();
-		creaMediciones();
+
 		}
 	
 

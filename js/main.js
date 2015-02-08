@@ -138,6 +138,6 @@ function cargaDatosSuccess(tx, results){
 	for(var i=0; i<results.rows.length; i++){
 		var navesDatos = results.rows.item(i);
 		var selector = $("#listadoNaves" +" ul");
-		selector.append('<li><a href="#detalleNaves">A-10</a></li>').listview('refresh');
+		selector.append('<li><a href="#detalleNaves">' + navesDatos.descripcion + '</a></li>').listview('refresh');
 	}
 }

@@ -21,7 +21,7 @@ function onDeviceReady() {
 	
 	if(existe_db == null){
 		creaNaves();
-
+		
 		}
 	
 
@@ -49,7 +49,7 @@ function creaNuevaNaves(tx){
 
 
 function creaNavesSuccess(){
-	window.localStorage.setItem("existe_naves", 1);
+	window.localStorage.setItem("existe_db", 1);
 };
 
 

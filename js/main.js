@@ -85,9 +85,8 @@ function cargaDatosSuccess(tx, results){
 	
 	
 	for(var i=0; i<results.rows.length; i++){
-		var naves = results.rows.item(i);
-		var selector = $("#navesVista");
-		selector.append('<li>'+naves.id+''+naves.nombre+'></li>').listview('refresh');
-	}
+	$.registro = results.rows.item(i);
+	$("#navesVista").html($.registro.nombre);	}
+	
 }
 

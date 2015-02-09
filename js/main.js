@@ -23,8 +23,7 @@ function onDeviceReady() {
 		creaBase();
 	}
 	
-	cargaDatos();
-	
+		
 
 
 };
@@ -73,7 +72,6 @@ function leerDatos(){
 }
 
 function leerRegistros(tx){
-	mkLog("Cargando registros de la base de datos");
 	tx.executeSql('SELECT * FROM naves', [], leerDatosSuccess, errorDB);
 }
 

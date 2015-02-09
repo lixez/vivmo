@@ -41,11 +41,6 @@ function creaNuevaBase(tx){
 		
 	tx.executeSql(sql);
 	
-	tx.executeSql("INSERT naves (id, descripcion) VALUES( 1,10-A)" );
-	tx.executeSql("INSERT naves (id, descripcion) VALUES( 2,20-A)" );
-	tx.executeSql("INSERT naves (id, descripcion) VALUES( 3,30-A)" );
-
-
 		
 };
 

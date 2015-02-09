@@ -102,3 +102,14 @@ function cargarDatos(tx){
 		   
 		window.location='data:text/csv;charset=utf8,' + encodeURIComponent(csvData);
 	};
+
+
+function exportarDatosSuccess(){
+	navigator.notification.alert("Base de datos exporatada");
+
+};
+
+
+function exportarDatosError(err){
+	navigator.notification.alert("Error procesando SQL " + err.code);
+};

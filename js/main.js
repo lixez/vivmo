@@ -88,11 +88,13 @@ function cargarDatos(tx){
 	}
 
 
-	var csvData = "";
+	
 
 	function exportarArchivo(tx){
+		
+		var csvData = "";
 
-		tx.executeSql (tx.executeSql('SELECT * FROM naves', [], exportarDatosSuccess, exportarDatosError));
+		tx.executeSql ('SELECT * FROM naves', [], exportarDatosSuccess, exportarDatosError);
 		 
 		var datosExportar = results.rows.length, i;
 			

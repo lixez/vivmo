@@ -20,52 +20,49 @@ function onDeviceReady() {
 	db = window.openDatabase("naves", "1.0", "DB de VIVMo", 200000);
 	
 	if(existe_db == null){
-		creaBase();
+		creaDB();
 	}
 	
-		
-
-
 };
 		
 	
-function creaBase(){
-	db.transaction(creaNuevaBase, errorDB, creaBaseSuccess);
-			cargaDatos();
+/* 
+* creación de ña base de datos
+*/
+function creaDB(){
+	db.transaction(creaNuevaDB, errorDB, creaSuccess);
 	
-};
+}
 
-function creaNuevaBase(tx){
-		
-	tx.executeSql('DROP TABLE IF EXISTS naves');
+function creaNuevaDB(tx){
+	mkLog("Creando base de datos");
 	
-	var sql = "CREATE TABLE IF NOT EXISTS naves( id INTEGER PRIMARY KEY, descripcion VARCHAR(50))";
+	tx.executeSql('DROP TABLE IF EXISTS agenda_curso');
+	
+	var sql = "CREATE TABLE IF NOT EXISTS agenda_curso ( "+
+		"id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+		"nombre VARCHAR(50), " +
+		"apellidos VARCHAR(50), " +
+		"telefono VARCHAR(30), " +
+		"categoria VARCHAR(30), " +
+		"foto VARCHAR(200), " + 
+		"email VARCHAR(30) )";
+		
 	tx.executeSql(sql);
 	
-		
-};
+	tx.executeSql("INSERT INTO agenda_curso (id,nombre,apellidos,telefono,categoria,foto,email) VALUES (1,'José','Pérez','+34566222666','amigo','','paco@paco.com')");
+	tx.executeSql("INSERT INTO agenda_curso (id,nombre,apellidos,telefono,categoria,foto,email) VALUES (2,'Siro','González','+34555434567','familia','','siro@test.com')");
+	tx.executeSql("INSERT INTO agenda_curso (id,nombre,apellidos,telefono,categoria,foto,email) VALUES (3,'Julio','Rodríguez','+34756222666','trabajo','','julio@test.com')");
+	
+}
 
 
-function creaBaseSuccess(){
+function creaSuccess(){
 	window.localStorage.setItem("existe_db", 1);
-	navigator.notification.alert("Base de datos creada exitosamente");
-
-};
-
+	cargaDatos();
+}
 
 function errorDB(err){
 	mkLog("Error procesando SQL " + err.code);
 	navigator.notification.alert("Error procesando SQL " + err.code);
-};
-
-
-
-
-function cargaDatos(){
-	navigator.notification.alert("ESTOY FUNCIONANDO cargaDatos" );
-	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (1,'A-10')");
-	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (2,'A-15')");
-	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (3,'A-20')");
-	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (4,'A-30')");
-	}
-
+}

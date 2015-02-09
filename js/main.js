@@ -80,7 +80,5 @@ function leerDatosSuccess(tx, results){
 	
 	navigator.notification.alert("Datos cargados" + results.rows.length );
 	
-	if(results.rows.length == 0){
-		navigator.notification.alert("No naves base de datos");
-	}
+	
 }

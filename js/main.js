@@ -77,6 +77,7 @@ function cargaRegistros(tx){
 
 function cargaDatosSuccess(tx, results){
 	mkLog("Recibidos de la DB " + results.rows.length + " registros");
+	navigator.notification.alert("Recibidos de la DB " + results.rows.length);
 	if(results.rows.length == 0){
 		mkLog("No se han recibido registros");
 		navigator.notification.alert("No hay contactos en la base de datos");

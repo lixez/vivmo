@@ -22,9 +22,9 @@ function onDeviceReady() {
 	if(existe_db == null){
 		creaBase();
 	}
-	else{
-		cargaDatos();
-		}
+	
+	cargaDatos();
+	
 
 
 };
@@ -62,24 +62,6 @@ function errorDB(err){
 
 
 
-/* 
-* carga de datos desde la base de datos
-*/
 function cargaDatos(){
-	db.transaction(cargaRegistros, errorDB);
 	navigator.notification.alert("ESTOY FUNCIONANDO cargaDatos" );
-}
-
-function cargaRegistros(tx){
-	mkLog("Cargando registros de la base de datos");
-	tx.executeSql('SELECT * FROM naves', [], cargaDatosSuccess, errorDB);
-}
-
-function cargaDatosSuccess(tx, results){
-	mkLog("Recibidos de la DB " + results.rows.length + " registros");
-	navigator.notification.alert("Datos cargados" + results.rows.length );
-	if(results.rows.length == 0){
-		mkLog("No se han recibido registros");
-		navigator.notification.alert("No naves base de datos");
-	}
 }

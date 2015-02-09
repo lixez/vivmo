@@ -68,18 +68,18 @@ function cargaDatos(){
 
 
 function leerDatos(){
-	db.transaction(leerRegistros, errorDB);
+	db.transaction(leerRegistros);
 }
 
 function leerRegistros(tx){
-	tx.executeSql('SELECT * FROM naves', [], leerDatosSuccess, errorDB);
+	tx.executeSql('SELECT * FROM naves', [], leerDatosSuccess);
 }
 
 function leerDatosSuccess(tx, results){
-	mkLog("Recibidos de la DB " + results.rows.length + " registros");
+	
 	navigator.notification.alert("Datos cargados" + results.rows.length );
+	
 	if(results.rows.length == 0){
-		mkLog("No se han recibido registros");
 		navigator.notification.alert("No naves base de datos");
 	}
 }

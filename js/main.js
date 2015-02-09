@@ -64,4 +64,24 @@ function errorDB(err){
 
 function cargaDatos(){
 	navigator.notification.alert("ESTOY FUNCIONANDO cargaDatos" );
+	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (1,A-10)");
+}
+
+
+function leerDatos(){
+	db.transaction(leerRegistros, errorDB);
+}
+
+function leerRegistros(tx){
+	mkLog("Cargando registros de la base de datos");
+	tx.executeSql('SELECT * FROM naves', [], leerDatosSuccess, errorDB);
+}
+
+function leerDatosSuccess(tx, results){
+	mkLog("Recibidos de la DB " + results.rows.length + " registros");
+	navigator.notification.alert("Datos cargados" + results.rows.length );
+	if(results.rows.length == 0){
+		mkLog("No se han recibido registros");
+		navigator.notification.alert("No naves base de datos");
+	}
 }

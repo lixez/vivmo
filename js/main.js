@@ -17,7 +17,7 @@ function onDeviceReady() {
 	
 	existe_db = window.localStorage.getItem("existe_db");
 	
-	db = window.openDatabase("naves", "1.0", "DB de VIVMo", 200000);
+	db = window.openDatabase("agenda_curso", "1.0", "DB de VIVMo", 200000);
 	
 	if(existe_db == null){
 		creaDB();

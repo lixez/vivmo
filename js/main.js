@@ -67,6 +67,7 @@ function errorDB(err){
 */
 function cargaDatos(){
 	db.transaction(cargaRegistros, errorDB);
+	navigator.notification.alert("ESTOY FUNCIONANDO cargaDatos" );
 }
 
 function cargaRegistros(tx){

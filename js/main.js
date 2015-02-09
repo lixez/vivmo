@@ -64,6 +64,11 @@ function errorDB(err){
 function cargaDatos(){
 	navigator.notification.alert("ESTOY FUNCIONANDO cargaDatos" );
 	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (1,A-10)");
+	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (2,A-10)");
+	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (3,A-10)");
+	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (4,A-10)");
+	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (5,A-10)");
+	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (6,A-10)");
 }
 
 

@@ -82,5 +82,12 @@ function cargaDatosSuccess(tx, results){
 		mkLog("No se han recibido registros");
 		navigator.notification.alert("No hay contactos en la base de datos");
 	}
+	
+	
+	for(var i=0; i<results.rows.length; i++){
+		var naves = results.rows.item(i);
+		var selector = $("#navesVista");
+		selector.append('<li>'+naves.id+''+naves.nombre+'></li>').listview('refresh');
+	}
 }
 

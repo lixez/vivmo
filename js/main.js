@@ -50,8 +50,6 @@ function creaNuevaBase(tx){
 	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (5,8-B)");
 	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (6,9-A)");
 	tx.executeSql("INSERT INTO naves (id,descripcion) VALUES (7,9-B)");
-
-
 	
 };
 
@@ -60,9 +58,7 @@ function creaBaseSuccess(){
 	window.localStorage.setItem("existe_db", 1);
 	navigator.notification.alert("Base de datos creada exitosamente");
 
-	cargaDatos();
 };
-
 
 
 function errorDB(err){

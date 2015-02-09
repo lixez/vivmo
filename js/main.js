@@ -22,7 +22,9 @@ function onDeviceReady() {
 	if(existe_db == null){
 		creaBase();
 	}
-	
+	else{
+		cargaDatos();
+		}
 
 
 };
@@ -30,6 +32,7 @@ function onDeviceReady() {
 	
 function creaBase(){
 	db.transaction(creaNuevaBase, errorDB, creaBaseSuccess);
+			cargaDatos();
 	
 };
 

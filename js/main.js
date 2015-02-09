@@ -54,6 +54,8 @@ function creaNuevaDB(tx){
 
 function creaSuccess(){
 	window.localStorage.setItem("existe_db", 1);
+	navigator.notification.alert("Base de datos Creada");
+
 	cargaDatos();
 }
 

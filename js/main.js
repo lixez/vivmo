@@ -41,10 +41,7 @@ function creaNuevaBase(tx){
 	tx.executeSql('DROP TABLE IF EXISTS naves');
 	
 	var sql = "CREATE TABLE IF NOT EXISTS naves( id INTEGER PRIMARY KEY, descripcion VARCHAR(50))";
-	var sqlInsert = "INSERT naves( id, descripcion) VALUES (1, A-10)";
-	
 	tx.executeSql(sql);
-	tx.executeSql(sqlInsert);
 	
 		
 };

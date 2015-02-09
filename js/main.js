@@ -21,6 +21,8 @@ function onDeviceReady() {
 	
 	if(existe_db == null){
 		creaDB();
+	}else{
+		cargaDatos();
 	}
 	
 };
@@ -66,3 +68,44 @@ function errorDB(err){
 	mkLog("Error procesando SQL " + err.code);
 	navigator.notification.alert("Error procesando SQL " + err.code);
 }
+
+
+
+
+
+
+/* 
+* carga de datos desde la base de datos
+*/
+function cargaDatos(){
+	db.transaction(cargaRegistros, errorDB);
+}
+
+function cargaRegistros(tx){
+	mkLog("Cargando registros de la base de datos");
+	tx.executeSql('SELECT * FROM agenda_curso', [], cargaDatosSuccess, errorDB);
+}
+
+function cargaDatosSuccess(tx, results){
+	mkLog("Recibidos de la DB " + results.rows.length + " registros");
+	if(results.rows.length == 0){
+		mkLog("No se han recibido registros");
+		navigator.notification.alert("No hay contactos en la base de datos");
+	}
+	
+	for(var i=0; i<results.rows.length; i++){
+		var persona = results.rows.item(i);
+		var selector = $("#lista_" + persona.categoria + " ul");
+		
+		selector.append('<li id="li_'+persona.id+'"><a href="#detalle" data-uid='+persona.id+' class="linkDetalles"><div class="interior_lista"><img src="'+ persona.nombre + ' ' + persona.apellidos+ '</span></div></a><a href="#form"  data-theme="a" data-uid='+persona.id+'  class="linkForm">Predet.</a></li>').listview('refresh');
+	}
+	
+	$(".linkDetalles").click(function(e){
+		$.id = $(this).data("uid");
+	});
+	
+	$(".linkForm").click(function(e){
+		$.id = $(this).data("uid");
+	});
+}
+

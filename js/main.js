@@ -38,8 +38,10 @@ function creaNuevaBase(tx){
 	tx.executeSql('DROP TABLE IF EXISTS naves');
 	
 	var sql = "CREATE TABLE IF NOT EXISTS naves( id INTEGER PRIMARY KEY, descripcion VARCHAR(50))";
-		
+	var sqlInsert = "INSERT naves( id, descripcion) VALUES (1, A-10)";
+	
 	tx.executeSql(sql);
+	tx.executeSql(sqlInsert);
 	
 		
 };
@@ -57,3 +59,26 @@ function errorDB(err){
 	navigator.notification.alert("Error procesando SQL " + err.code);
 };
 
+
+
+
+/* 
+* carga de datos desde la base de datos
+*/
+function cargaDatos(){
+	db.transaction(cargaRegistros, errorDB);
+}
+
+function cargaRegistros(tx){
+	mkLog("Cargando registros de la base de datos");
+	tx.executeSql('SELECT * FROM naves', [], cargaDatosSuccess, errorDB);
+}
+
+function cargaDatosSuccess(tx, results){
+	mkLog("Recibidos de la DB " + results.rows.length + " registros");
+	navigator.notification.alert("Datos cargados" + results.rows.length );
+	if(results.rows.length == 0){
+		mkLog("No se han recibido registros");
+		navigator.notification.alert("No naves base de datos");
+	}
+}

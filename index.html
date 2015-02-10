@@ -18,12 +18,14 @@
 
 <body onload="onLoad()">
 
-    <!--=====================================================-->
-    <!--PAGINA PRINCIPAL=====================================-->
+
+
+	<!--=====================================================-->
+    <!--PAGINA PRINCIPAL========================================-->
     <!--=====================================================-->
     <!--=====================================================-->
 
-    <div data-role="page" id="home">
+    <div data-role="page" data-theme="a" id="menu">
         <div data-role="header">
             <h1>MENU</h1>
         </div>
@@ -32,15 +34,16 @@
             <table border="0" cellpadding="0" width="100%">
                 <tr>
                     <td align="center" valign="middle">
-                        <a href="#naves"><img height="90%" src=
-                        "themes/images/icons-png/icons-home-naves.png"></a>
+                        <a href="#naves">
+                        <img height="90%" src="themes/images/icons-png/icons-home-naves.png"/>
+                        </a>
 
                         <p>NAVES</p>
                     </td>
 
                     <td align="center" valign="middle">
                         <a href="#instalaciones"><img height="90%" src=
-                        "themes/images/icons-png/icons-home-instalaciones.png"></a>
+                        "themes/images/icons-png/icons-home-instalaciones.png"/></a>
 
                         <p>INSTALACIONES</p>
                     </td>
@@ -49,49 +52,56 @@
                 <tr>
                     <td align="center" valign="middle">
                         <a href="#medir"><img height="90%" src=
-                        "themes/images/icons-png/icons-home-medir.png"></a>
+                        "themes/images/icons-png/icons-home-medir.png"/></a>
 
                         <p>MEDIR</p>
                     </td>
 
                     <td align="center" valign="middle">
                         <a href="#buscar"><img height="90%" src=
-                        "themes/images/icons-png/icons-home-buscar.png"></a>
+                        "themes/images/icons-png/icons-home-buscar.png"/></a>
 
                         <p>BUSCAR</p>
                     </td>
                 </tr>
             </table>
                     
-          
-          <div id="navesVista">
-          
-          Algo aca
+                   
           </div>
-                     
-          </div>
-
-            
-        </div>
 
         <div data-role="footer">
             <h4>Moebius-IT @ 2015</h4>
         </div>
     </div>
+
+   
     
     <!--=====================================================-->
     <!--NAVES========================================-->
     <!--=====================================================-->
     <!--=====================================================-->
 
-    <div data-role="page" data-theme="a" id="naves">
+    <div data-role="page" data-theme="a" id="naves" >
         <div data-role="header">
+        <a href="#menu" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
             <h1>NAVES</h1>
         </div>
 
         <div data-role="content">
             <ul data-role="listview" id="listadoNaves">
-                
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+               <li id="descripcionInstalacion"><a href="#detalleNaves">A-10</a></li>
+
             </ul>
         </div>
 
@@ -107,68 +117,84 @@
 
     <div data-role="page" data-theme="a" id="detalleNaves">
         <div data-role="header">
+                <a href="#menu" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+
             <h1>DETALLE NAVES</h1>
         </div>
 
         <div data-role="content">
             <div data-role="fieldcontain">
-                <label class="select" for=
-                "instalacionSelect">Instalación:</label> <select id=
-                "instalacion" name="instalacionSelect">
+             
+             <form id="medirForm" name"medirForm">
+               <label class="select" for="instalacionSelect">Instalación:</label> <select id="instalacion" name="instalacionSelect">
                     <option value="option1">
-                        134 NC:56 P:2345
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
                     </option>
                 </select>
             </div>
 
-            <div id="muestras">
-                <div data-role="fieldcontain">
-                    <label for="muestras">Muestras:</label> <input id=
-                    "muestras" name="muestras" type="text" value="">
-                </div>
-            </div>
-
+            
             <div id="parcela">
                 <div data-role="fieldcontain">
-                    <label for="parcela">Parcela:</label> <input id="parcela"
-                    name="parcela" type="text" value="">
+                    <label for="parcela">Parcelas:</label> <input id="parcela"
+                    name="parcela" disabled type="text" value="64">
                 </div>
             </div>
 
             <div id="muertas">
                 <div data-role="fieldcontain">
                     <label for="muertas">Muertas:</label> <input id="muertas"
-                    name="muertas" type="text" value="">
+                    name="muertas"  disabled type="text" value="9">
                 </div>
             </div>
 
             <div id="plantas">
                 <div data-role="fieldcontain">
                     <label for="plantas">Plantas:</label> <input id="plantas"
-                    name="plantas" type="text" value="">
+                    name="plantas" type="text"  disabled value="234">
                 </div>
             </div>
 
-            <div id="planta">
-                <div data-role="fieldcontain">
-                    <label for="planta">Planta:</label> <input id="planta"
-                    name="planta" type="text" value="">
-                </div>
-            </div>
-
+           
             <div id="altura">
                 <div data-role="fieldcontain">
-                    <label for="altura">Altura:</label> <input id="altura"
-                    name="altura" type="text" value="">
+                    <label for="altura">Altura Promedio:</label> <input id="altura"
+                    name="altura" type="text"  disabled value="2m">
                 </div>
             </div>
 
             <div id="diametro">
                 <div data-role="fieldcontain">
-                    <label for="diametro">Diametro:</label> <input id=
-                    "diametro" name="diametro" type="text" value="">
+                    <label for="diametro">Diametro Promedio:</label> <input id=
+                    "diametro" name="diametro"  disabled type="text" value="1m">
                 </div>
-            </div><a data-role="button" href="#formEdit">EDITAR</a>
+            </div>
+                        
+<a href="#naves" data-role="button" data-theme="e">VOLVER</a>
+<a href="#medir" data-role="button" data-theme="d">REALIZAR UNA MEDICION</a>
+
+
+	      </form>
         </div>
 
         <div data-role="footer">
@@ -183,13 +209,39 @@
 
     <div data-role="page" data-theme="a" id="instalaciones">
         <div data-role="header">
+                <a href="#menu" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+
             <h1>INSTALACIONES</h1>
         </div>
 
         <div data-role="content">
             <ul data-role="listview">
                 <li id="descripcionInstalacion">
-                    <a href="#detalleInstalaciones">333 bc : 43434 : 55554</a>
+                    <a href="#detalleInstalaciones">134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</a>
+                </li>
+                
+                <li>
+                    <a href="#detalleInstalaciones">134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</a>
+                </li>
+                
+                <li>
+                    <a href="#detalleInstalaciones">134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</a>
+                </li>
+                
+                <li>
+                    <a href="#detalleInstalaciones">134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</a>
+                </li>
+                
+                  <li>
+                    <a href="#detalleInstalaciones">134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</a>
+                </li>
+                
+                  <li>
+                    <a href="#detalleInstalaciones">134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</a>
+                </li>
+                
+                  <li>
+                    <a href="#detalleInstalaciones">134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</a>
                 </li>
             </ul>
         </div>
@@ -206,50 +258,47 @@
 
     <div data-role="page" data-theme="a" id="detalleInstalaciones">
         <div data-role="header">
+                <a href="#menu" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+
             <h1>DETALLE INSTALACIONES</h1>
         </div>
 
         <div data-role="content">
             <div data-role="fieldcontain">
                 <label for="temporada">Temporada:</label> <input id="temporada"
-                name="temporada" type="text" value="">
-            </div>
-
-            <div data-role="fieldcontain">
-                <label for="nave">Nave:</label> <input id="nave" name="nave"
-                type="text" value="">
+                name="temporada" disabled type="text" value="C">
             </div>
 
             <div data-role="fieldcontain">
                 <label for="codigo">Codigo:</label> <input id="codigo" name=
-                "codigo" type="text" value="">
+                "codigo" disabled type="text" value="3030">
             </div>
 
             <div data-role="fieldcontain">
                 <label for="fuente">Fuente:</label> <input id="fuente" name=
-                "fuente" type="text" value="">
+                "fuente" disabled type="text" value="3">
             </div>
 
-            <div data-role="fieldcontain">
-                <label for="contenedor">Contenedor:</label> <input id=
-                "contenedor" name="contenedor" type="text" value="">
-            </div>
-
+  
             <div data-role="fieldcontain">
                 <label for="parcelas">Parcelas:</label> <input id="parcelas"
-                name="parcelas" type="text" value="">
+                name="parcelas" disabled type="text" value="20">
             </div>
 
             <div data-role="fieldcontain">
                 <label for="estratos">Estratos:</label> <input id="estratos"
-                name="estratos" type="text" value="">
+                name="estratos" disabled type="text" value="2">
             </div>
 
             <div data-role="fieldcontain">
                 <label for="especies">Especies:</label> <input id="especies"
-                name="especies" type="text" value="">
+                name="especies" disabled type="text" value="3">
             </div>
         </div>
+
+       <a href="#instalaciones" data-role="button" data-theme="e">VOLVER</a>
+
+<a href="#medir" data-role="button" data-theme="d">REALIZAR UNA MEDICION</a>
 
         <div data-role="footer">
             <h4>Moebius-IT @ 2015</h4>
@@ -269,7 +318,7 @@
         <div data-role="content">
             <div data-role="fieldcontain">
                 <label class="select" for="naveSelect">Nave:</label>
-                <select id="nave" name="naveSelect">
+                <select id="nave" name="naveSelect" disabled>
                     <option value="option1">
                         A-10
                     </option>
@@ -280,8 +329,28 @@
                 <label class="select" for=
                 "instalacionSelect">Instalación:</label> <select id=
                 "instalacion" name="instalacionSelect">
-                    <option value="option1">
-                        134 NC:56 P:2345
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
                     </option>
                 </select>
             </div>
@@ -296,7 +365,7 @@
             <div id="parcela">
                 <div data-role="fieldcontain">
                     <label for="parcela">Parcela:</label> <input id="parcela"
-                    name="parcela" type="text" value="">
+                    name="parcela" type="text" disabled value="1">
                 </div>
             </div>
 
@@ -310,14 +379,14 @@
             <div id="plantas">
                 <div data-role="fieldcontain">
                     <label for="plantas">Plantas:</label> <input id="plantas"
-                    name="plantas" type="text" value="">
+                    name="plantas" type="text" disabled value="8">
                 </div>
             </div>
 
             <div id="planta">
                 <div data-role="fieldcontain">
                     <label for="planta">Planta:</label> <input id="planta"
-                    name="planta" type="text" value="">
+                    name="planta" type="text" disabled value="1">
                 </div>
             </div>
 
@@ -333,7 +402,751 @@
                     <label for="diametro">Diametro:</label> <input id=
                     "diametro" name="diametro" type="text" value="">
                 </div>
-            </div><a data-role="button" href="#formNew" onClick="exportar()">GUARDAR</a>
+            </div><a data-role="button" href="#medir2">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
+    
+    
+    
+    <!--=====================================================-->
+    <!--MEDIR 2========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir2">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect" disabled>
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect" disabled>
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" disabled type="text" value="2">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#medir3">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
+    
+    
+    <!--=====================================================-->
+    <!--MEDIR 3========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir3">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect" disabled>
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect" disabled>
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" disabled type="text" value="2">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" disabled value="3">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#medir4">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
+    
+    
+    <!--=====================================================-->
+    <!--MEDIR 4========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir4">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect" disabled>
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect" disabled>
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" disabled type="text" value="2">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" disabled value="4">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#medir5">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
+    
+    
+    <!--=====================================================-->
+    <!--MEDIR 5========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir5">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect" disabled>
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect" disabled>
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" disabled type="text" value="2">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" disabled value="5">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#medir6">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
+    
+    
+    <!--=====================================================-->
+    <!--MEDIR 6========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir6">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect" disabled>
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect" disabled>
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" disabled type="text" value="2">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" disabled value="6">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#medir7">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
+    
+    
+    <!--=====================================================-->
+    <!--MEDIR 2========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir7">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect" disabled>
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect" disabled>
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" disabled type="text" value="2">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" disabled value="7">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div><a data-role="button" href="#medir8">GUARDAR</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>Moebius-IT @ 2015</h4>
+        </div>
+    </div>
+    
+    <!--=====================================================-->
+    <!--MEDIR 2========================================-->
+    <!--=====================================================-->
+    <!--=====================================================-->
+
+    <div data-role="page" data-theme="a" id="medir8">
+        <div data-role="header">
+            <h1>MEDIR</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label class="select" for="naveSelect">Nave:</label>
+                <select id="nave" name="naveSelect" disabled>
+                    <option value="option1">
+                        A-10
+                    </option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label class="select" for=
+                "instalacionSelect">Instalación:</label> <select id=
+                "instalacion" name="instalacionSelect" disabled>
+                   <option value="option1">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option2">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option3">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                     <option value="option4">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option5">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                    
+                      <option value="option6">
+                            134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015
+                    </option>
+                </select>
+            </div>
+
+            <div id="muestras">
+                <div data-role="fieldcontain">
+                    <label for="muestras">Muestras:</label> <input id=
+                    "muestras" name="muestras" disabled type="text" value="2">
+                </div>
+            </div>
+
+            <div id="parcela">
+                <div data-role="fieldcontain">
+                    <label for="parcela">Parcela:</label> <input id="parcela"
+                    name="parcela" type="text" disabled value="2">
+                </div>
+            </div>
+
+            <div id="muertas">
+                <div data-role="fieldcontain">
+                    <label for="muertas">Muertas:</label> <input id="muertas"
+                    name="muertas" type="text" value="">
+                </div>
+            </div>
+
+            <div id="plantas">
+                <div data-role="fieldcontain">
+                    <label for="plantas">Plantas:</label> <input id="plantas"
+                    name="plantas" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="planta">
+                <div data-role="fieldcontain">
+                    <label for="planta">Planta:</label> <input id="planta"
+                    name="planta" type="text" disabled value="8">
+                </div>
+            </div>
+
+            <div id="altura">
+                <div data-role="fieldcontain">
+                    <label for="altura">Altura:</label> <input id="altura"
+                    name="altura" type="text" value="">
+                </div>
+            </div>
+
+            <div id="diametro">
+                <div data-role="fieldcontain">
+                    <label for="diametro">Diametro:</label> <input id=
+                    "diametro" name="diametro" type="text" value="">
+                </div>
+            </div>
+            <a data-role="button" onClick="alertaPlanta8()">GUARDAR</a>
+            <a data-role="button"  href="#naves" data-theme="d">VOLVER A NAVES</a>
         </div>
 
         <div data-role="footer">
@@ -348,15 +1161,18 @@
 
     <div data-role="page" data-theme="a" id="buscar">
         <div data-role="header">
+                <a href="#menu" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+
             <h1>MEDICIONES</h1>
         </div>
 
         <div data-role="content">
             <table border="0" cellpadding="0" width="100%">
+                      
                 <tr>
                     <td>ID</td>
 
-                    <td>NAVE</td>
+                    <td>A-10</td>
 
                     <td>INSTALACION</td>
 
@@ -371,6 +1187,173 @@
                     <td>ALTURA</td>
 
                     <td>DIAMETRO</td>
+                </tr>
+                
+                 <tr>
+                    <td>1</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
+                </tr>
+                
+                
+                 <tr>
+                    <td>2</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
+                </tr>
+                
+                
+                 <tr>
+                    <td>3</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
+                </tr>
+                
+                
+                 <tr>
+                    <td>4</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
+                </tr>
+                
+                
+                 <tr>
+                    <td>5</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
+                </tr>
+                
+                
+                 <tr>
+                    <td>6</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
+                </tr>
+                
+                
+                 <tr>
+                    <td>7</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
+                </tr>
+                
+                
+                 <tr>
+                    <td>8</td>
+
+                    <td>NAVE</td>
+
+                    <td>134 NC:56 P:2345 E:TC F:T C:27 B1 T:2015</td>
+
+                    <td>8</td>
+
+                    <td>2</td>
+
+                    <td>345</td>
+
+                    <td>1</td>
+
+                    <td>2</td>
+
+                    <td>1</td>
                 </tr>
             </table>
         </div>
